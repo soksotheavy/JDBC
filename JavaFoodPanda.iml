@@ -16,7 +16,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="postgresql-42.7.3" level="project" />
     <orderEntry type="library" name="lombok (1) - Copy" level="project" />
+    <orderEntry type="library" name="postgresql-42.7.3" level="project" />
   </component>
 </module>

@@ -25,14 +25,11 @@ public class CustomerController {
         String email = new Scanner(System.in).nextLine();
         System.out.print("Customer Password: ");
         String password = new Scanner(System.in).nextLine();
-        System.out.println("Customer Bio: ");
-        String bio = new Scanner(System.in).nextLine();
         new CustomerServiceImpl().addNewCustomer(Customer.builder()
-                            .id(1)
+                            .id(8)
                             .name(name)
                             .email(email)
                             .password(password)
-                            .bio(bio)
                             .is_deleted(false)
                             .created_date(Date.valueOf(LocalDate.now()))
                 .build());

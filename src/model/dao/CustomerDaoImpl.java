@@ -129,8 +129,8 @@ public class CustomerDaoImpl implements CustomerDao {
     @Override
     public int addNewCustomer(Customer customer) {
         String sql = """
-                INSERT INTO customer (name, email, password, is_deleted, created_date, bio)
-                VALUES (?, ?, ?, ?, ?, ?)
+                INSERT INTO customer (name, email, password, is_deleted, created_date)
+                VALUES (?, ?, ?, ?, ?)
                 """;
         try(
                 Connection connection = connectionToDataBase();
@@ -141,7 +141,6 @@ public class CustomerDaoImpl implements CustomerDao {
             pre.setString(3, customer.getPassword());
             pre.setBoolean(4, customer.getIs_deleted());
             pre.setDate(5, customer.getCreated_date());
-            pre.setString(6, customer.getBio());
             return pre.executeUpdate();
         }catch (SQLException sqlException){
             System.out.println(sqlException.getMessage());
